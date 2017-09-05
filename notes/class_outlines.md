@@ -1,10 +1,10 @@
 # Tuesday, September 5th: Course Introduction
-* Course wait-list
+* The bad news: course is closed, wait-list
+* The good news: administrative changes
 * Why (still) the web?  Why are you here?
 * Motivation 1, the first web page (1992): http://info.cern.ch/hypertext/WWW/TheProject.html
 * Motivation 1A: http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html
 * Motivation 2: http://www.dolekemp96.org/
-* Administrativa
 * How two computers talk to each other: basic networking
 * The Internet vs the World Wide Web
 
