@@ -97,6 +97,7 @@
 * Why this technique?
 
 # Tuesday, September 26th: JavaScript
+* File permissions
 * So far, we have covered quite a bit: HTTP, HTML, CSS, Git
 * What are the problems and limitations with just HTML and CSS?
 * HTTP: stateless protocol, no memory of previous requests
