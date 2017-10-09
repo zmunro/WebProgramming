@@ -156,6 +156,8 @@
 * Last class + this week: you will start to see _why_ first class functions and JavaScript objects are so important
 * I really enjoy teaching this class online.  Notice the interactions that we have on Piazza......
 * This week: asynchronous, limitations of JavaScript
+* First things first: JSON --Data exchange format (think text file).  JSON is string, NOT JavaScript objects.
+* Why JSON?
 * So far, you have only worked with synchronous communications. Problem: slow, linear, "locking", not smooth
 * The bigger idea: asynchronous communications.  Where it is used: events
 * (Recall) example: Twitter timeline.  Take a look at number of requests made _after page is loaded_
@@ -179,8 +181,6 @@
 * Parsing the JSON data
 * Is checking for readyState 4 good enough?  NO!
 * Caveats with XMLHttpRequest and one of the limitations of client-side JavaScript
-* JSON: Data exchange format (think text file).  JSON is string, NOT JavaScript objects.
-* Why JSON?
 
 # Tuesday, October 17th: jQuery
 * Limitations of Client-Side JavaScript:
