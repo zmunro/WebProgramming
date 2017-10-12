@@ -13,12 +13,18 @@
 
 			// Step 3: Set up callback on what to do when response is received
 			request.onreadystatechange = function() {
-				// Step 3A: get the response text
-				rawData = request.responseText;
-				document.getElementById("messages").innerHTML = rawData;
-				if (rawData != null) {
+				// Step 3A: get the response text if and only if readyState is 4
+				if (request.readyState == 4 && request.status == 200) {
+
+					// Step 5: do something with the response data (i.e., the JSON)
+					rawData = request.responseText;
 					messages = JSON.parse(rawData);
-					console.log(messages);
+					output = "<ul>";
+					for (count = 0; count < messages.length; count++) {
+						output += "<li>" + messages[count].content + " => " + messages[count].username + "</li>";
+					}
+					output += "</ul>";
+					document.getElementById("messages").innerHTML = output;
 				}
 			}
 
