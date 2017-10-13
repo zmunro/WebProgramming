@@ -3,16 +3,18 @@
 <html>
 <head>
 <title>Where Am I?</title>
+<link rel="stylesheet" href="gmap_api_example_style.css" />
 <script>
 	var lat = -99999;
 	var lng = -99999;
 	function getLocation() {
 		console.log("Hit me 1");
-		navigator.geolocation.getCurrentPosition(function(pos) {
+		navigator.geolocation.getCurrentPosition(function(somePos) {
 			console.log("Hit me 2");
 
-			lat = pos.coords.latitude;
-			lng = pos.coords.longitude;
+			lat = somePos.coords.latitude;
+			lng = somePos.coords.longitude;
+			console.log(somePos.coords.altitude);
 			printLocation();
 		});	
 		console.log("Hit me 3");
@@ -20,7 +22,7 @@
 
 	function printLocation() {
 		elem = document.getElementById("location");
-		elem.innerHTML = "<p>" + lat + ", " + lng + "</p>";
+		elem.innerHTML = '<p class="fun">' + lat + ", " + lng + "</p>";
 	}
 </script>
 </head>
