@@ -180,9 +180,9 @@
     - 4 => The request is complete
 * Parsing the JSON data
 * Is checking for readyState 4 good enough?  NO!
-* Caveats with XMLHttpRequest and one of the limitations of client-side JavaScript
 
 # Tuesday, October 17th: jQuery
+* Caveats with XMLHttpRequest and one of the limitations of client-side JavaScript
 * Limitations of Client-Side JavaScript:
   - Client-side tasks (or what you can do with client-side JavaScript)
     - Dynamically modify browser content, e.g., with animation
@@ -210,4 +210,15 @@
   - Need basic vocabulary
   - How $() works => DOM
   - How $.ajax, $.get, $.post all work => XHR
-* Midsemester eval
+
+# Thursday, October 19th: Persistence with Cookies and Local Storage
+* Last class: S.O.P. in client-side JavaScript
+* Motivation: a certain project at PolyHack caught my attention...
+* Today: storing data over time
+* What can't we do, knowing the limitations of client-side JavaScript.
+* What we have learned so far in this course: key-value pairs
+* Two basic storage mechanisms on the client-side: cookies, local storage
+* Cookies: 4 KB max, there is a max number of cookies per domain
+* Local storage: ~5 MB per domain
+* The finer point: both cookies are local storage are still bound by Same Origin Policy
+* Examples
