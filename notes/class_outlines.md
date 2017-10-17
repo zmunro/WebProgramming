@@ -182,6 +182,8 @@
 * Is checking for readyState 4 good enough?  NO!
 
 # Tuesday, October 17th: jQuery
+* Semester group project teams
+* Project proposal extended
 * Caveats with XMLHttpRequest and one of the limitations of client-side JavaScript
 * Limitations of Client-Side JavaScript:
   - Client-side tasks (or what you can do with client-side JavaScript)
