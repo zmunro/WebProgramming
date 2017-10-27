@@ -4,19 +4,19 @@
 
 <head>
 <title>COMP 20: Web Programming</title>
-<script src="jquery-3.1.1.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("div#today ul").hide();
-		$("div#yesterday ul").hide();
-		$("div#today p").click(function() {
-			$("div#today ul").slideToggle('fast');
+	<script src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("div#today ul").hide();
+			$("div#yesterday ul").hide();
+			$("div#today p").click(function() {
+				$("div#today ul").slideToggle('fast');
+			});
+			$("div#yesterday p").click(function() {
+				$("div#yesterday ul").slideToggle('fast');
+			});
 		});
-		$("div#yesterday p").click(function() {
-			$("div#yesterday ul").slideToggle('fast');
-		});
-	});
-</script>
+	</script>
 </head>
 
 <body>
@@ -47,5 +47,6 @@
 			<li>Steven is now connected to James</li>
 		</ul>
 	</div>
+
 </body>
 </html>

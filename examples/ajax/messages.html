@@ -21,13 +21,7 @@
 
 					// Step 5: do something with the response data (i.e., the JSON)
 					rawData = request.responseText;
-					messages = JSON.parse(rawData);
-					output = "<ul>";
-					for (count = 0; count < messages.length; count++) {
-						output += "<li>" + messages[count].content + " => " + messages[count].username + "</li>";
-					}
-					output += "</ul>";
-					document.getElementById("messages").innerHTML = output;
+					console.log(rawData);
 				}
 			}
 
