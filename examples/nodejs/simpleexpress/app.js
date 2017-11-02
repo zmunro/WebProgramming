@@ -7,10 +7,6 @@ app.use(bodyParser.json());
 // See https://stackoverflow.com/questions/25471856/express-throws-error-as-body-parser-deprecated-undefined-extended
 app.use(bodyParser.urlencoded({ extended: true })); // Required if we need to use HTTP post parameters
 
-app.get('/landmarks', function(request, response) {
-	response.send('{"name":"Dracula\'s Castle","location":"Transylvania, Romania"}');
-});
-
 app.get('/', function(request, response) {
 	response.send("Hello world");
 });
