@@ -242,8 +242,8 @@
 * Making HTTP POST requests
 * A fine point: data sent to a web server is always text!
 
-# Thursday, November 2nd: MongoDB: Data Persistence with MongoDB, Connecting Node.js with MongoDB
-* A simple and complex picture of client-server architecture: https://www.acunetix.com/websitesecurity/web-applications/
+# Thursday, November 9th: MongoDB: Data Persistence with MongoDB, Connecting Node.js with MongoDB
+* A simple and complex picture of client-server architecture: https://www.acunetix.com/websitesecurity/web-application-attack/
 * So far, we have talked about the middle tier using Node.js and Express.js (framework on top of Node.js)
 * Handling data via HTTP POST...
 * ...or HTTP GET
@@ -261,4 +261,3 @@
 * Important: inserting a document into a database that does not exist WILL create the database!
 * Wait, I'm confused: we are dealing with two different systems here. How do you have a Node.js server talk to a MongoDB server? The answer: a driver. A driver is a piece of software for accessing a database.  Think of this as a translation engine.  There is a `mongodb` driver for Node.js
 * Example: https://github.com/tuftsdev/WebProgramming/tree/gh-pages/examples/nodejs/nodemongoapp.  Feel free to copy and use initialization code.  It will help you big time!
-* Quiz 2
