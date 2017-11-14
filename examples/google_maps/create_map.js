@@ -11,8 +11,7 @@ var map;
 var marker;
 var infowindow = new google.maps.InfoWindow();
 
-function init()
-{
+function init() {
 	map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	getMyLocation();
 }
@@ -30,9 +29,17 @@ function getMyLocation() {
 	}
 }
 
-function renderMap()
-{
+function renderMap() {
 	me = new google.maps.LatLng(myLat, myLng);
+
+	// Using Google Places API to look for restaurants within 1 mi of where I am
+	// Documentation: https://developers.google.com/maps/documentation/javascript/examples/place-search
+	service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: me,
+          radius: 1609, // meters
+          type: ['restaurant']
+        }, callback);
 	
 	// Update map and go there...
 	map.panTo(me);
@@ -49,4 +56,27 @@ function renderMap()
 		infowindow.setContent(marker.title);
 		infowindow.open(map, marker);
 	});
+
+	function callback(results, status) {
+		if (status === google.maps.places.PlacesServiceStatus.OK) {
+			for (var i = 0; i < results.length; i++) {
+				createMarker(results[i]);
+			}
+		}
+	}
+
+	function createMarker(place) {
+		console.log(place);
+		var placeLoc = place.geometry.location;
+		var marker = new google.maps.Marker({
+			map: map,
+			icon: "food_icon.png",
+			position: place.geometry.location
+		});
+
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.setContent(place.name);
+			infowindow.open(map, this);
+		});
+	}
 }
